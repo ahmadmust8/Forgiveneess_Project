@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Foregivness3</string>
+    <string name="action_settings">Settings</string>
+    <string name="Forgivens_1">أستغفر الله</string>
+    <string name="Forgivens_2">سبحان الله</string>
+    <string name="Forgivens_3">الحمد لله</string>
+    <string name="Forgivens_4">الله أكبر</string>
+    <string name="new_Forgivens">نوع جديد</string>
+</resources>
