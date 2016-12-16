@@ -1,6 +1,7 @@
 # Forgiveneess Project
 Forgiveness It Is My Gift For Muslims Pepole.
 It Is Simple App but, Has a Lot Of Android Technology Tactics.
+I Will Add One Of The Features In Every Week.
 Make The World a Better Place (: 
 
 Features to be added:
