@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.ahmad.mustafa.foregivness3">
 
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/prayer1"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -20,6 +22,15 @@
         </activity>
         <activity android:name=".AddNewFrogivnes2">
         </activity>
+        <activity android:name=".AstegfarActivity">
+        </activity>
+        <activity android:name=".NewTypeForegivnss">
+        </activity>
+
+        <receiver android:name=".NotificationRecever">
+
+        </receiver>
+
     </application>
 
 </manifest>

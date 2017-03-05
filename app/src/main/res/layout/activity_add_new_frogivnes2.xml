@@ -10,6 +10,8 @@
 
 
     <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:onClick="onClickForgivnessType"
         android:text="@string/Forgivens_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,6 +26,8 @@
         app:layout_constraintTop_toBottomOf="@+id/forgivnes_2"/>
 
     <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:onClick="onClickForgivnessType"
         android:text="@string/Forgivens_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,6 +42,8 @@
         android:layout_marginTop="8dp"/>
 
     <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:onClick="onClickForgivnessType"
         android:text="@string/Forgivens_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,6 +58,8 @@
         app:layout_constraintTop_toBottomOf="@+id/forgivnes_1"/>
 
     <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:onClick="onClickForgivnessType"
         android:text="@string/Forgivens_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,6 +74,8 @@
         app:layout_constraintTop_toBottomOf="@+id/forgivnes_3"/>
 
     <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:onClick="newTypeClick"
         android:text="@string/new_Forgivens"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

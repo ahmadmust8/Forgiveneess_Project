@@ -14,6 +14,8 @@ public class AddNewFrogivnes2 extends AppCompatActivity
     private Button forgivnes2;
     private Button forgivnes3;
     private Button forgivnes4;
+
+    // maybe needs this object later ?
     private Button newforgivnes;
 
     @Override
@@ -34,36 +36,43 @@ public class AddNewFrogivnes2 extends AppCompatActivity
     // & put it's name to Intent object & start
     public void onClickForgivnessType(View view)
     {
-        Intent intent = new Intent(getApplicationContext() , AstegfarActivity.class);
         int id = view.getId();
         switch (id)
         {
             case R.id.forgivnes_1:
-                intent.putExtra( "type" , forgivnes1.getText().toString());
+                startActivity(new Intent(getApplicationContext() , AstegfarActivity.class).
+                        putExtra( "type" , forgivnes1.getText().toString()));
                 break;
 
             case R.id.forgivnes_2:
-                intent.putExtra( "type" , forgivnes2.getText().toString());
+                startActivity(new Intent(getApplicationContext() , AstegfarActivity.class).
+                        putExtra( "type" , forgivnes2.getText().toString()));
                 break;
 
             case R.id.forgivnes_3:
-                intent.putExtra( "type" , forgivnes3.getText().toString());
+                startActivity(new Intent(getApplicationContext() , AstegfarActivity.class).
+                        putExtra( "type" , forgivnes3.getText().toString()));
                 break;
 
             case R.id.forgivnes_4:
-                intent.putExtra("type" , forgivnes4.getText().toString());
+                startActivity(new Intent(getApplicationContext() , AstegfarActivity.class).
+                        putExtra("type" , forgivnes4.getText().toString()));
                 break;
 
             default:
 
         }
-        startActivity(intent);
+
+        finish();
     }
 
-    @Override
-    protected void onPause()
-    {
-        super.onPause();
+
+
+
+    // on Click on the new type Button this method well commit.
+    public void newTypeClick(View view) {
+
+        startActivity(new Intent(getApplicationContext() , NewTypeForegivnss.class));
         finish();
     }
 }

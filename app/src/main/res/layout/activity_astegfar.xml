@@ -9,6 +9,7 @@
     tools:context="com.ahmad.mustafa.foregivness3.AstegfarActivity">
 
     <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="209dp"
         android:layout_height="192dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,7 +21,7 @@
         />
 
     <TextView
-        android:text="0"
+        android:text="@string/_0"
         android:layout_width="95dp"
         android:layout_height="40dp"
         android:id="@+id/counter_textview"
@@ -29,5 +30,7 @@
         android:layout_marginTop="62dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/button_forgivenss_counter"
-        android:layout_marginBottom="58dp"/>
+        android:layout_marginBottom="58dp"
+        android:textAlignment="center"
+        android:textSize="24sp"/>
 </android.support.constraint.ConstraintLayout>
