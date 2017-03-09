@@ -32,11 +32,10 @@ public class ForegivnesAdapter extends ArrayAdapter<ForegfivnesMudel> {
           convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_items,parent,false);
         }
 
+        //set the text in TextView in the ListView.
         TextView forgivText = (TextView)convertView.findViewById(R.id.foregiv_item_list);
-        TextView countText = (TextView)convertView.findViewById(R.id.count_item_list);
 
         forgivText.setText(mudel.getForgivnesType().toString());
-        countText.setText(mudel.getCounterType() + "".toString());
 
         return convertView;
     }

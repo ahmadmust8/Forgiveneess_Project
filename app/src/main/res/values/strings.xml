@@ -12,4 +12,9 @@
     <string name="Remember">تذكير كل ساعة</string>
     <string name="remember">ذكر الله</string>
     <string name="_0">0</string>
+    <string name="hijri_calendar">التاريخ الهجري</string>
+    <string name="Select_Your_option">إختر من الخيارات</string>
+    <string name="Delete_or_Cancel">حذف </string>
+    <string name="Delete">حذف</string>
+    <string name="Cancel">رجوع</string>
 </resources>

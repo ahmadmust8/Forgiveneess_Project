@@ -15,16 +15,14 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+
+import net.alhazmy13.hijridatepicker.HijriCalendarDialog;
+import net.alhazmy13.hijridatepicker.HijriCalendarView;
+
 import java.util.List;
 
-import io.realm.Realm;
-import io.realm.RealmResults;
 
-import static android.R.attr.id;
-import static com.ahmad.mustafa.foregivness3.R.id.fab;
-
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends AppCompatActivity implements HijriCalendarView.OnDateSetListener
 {
 
     ListView forgivneesListView ;
@@ -36,6 +34,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
 
         forgivneesListView =(ListView)findViewById(R.id.list_view);
@@ -71,7 +70,8 @@ public class MainActivity extends AppCompatActivity
 
         forgivneesListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, final int pos, long l) {
+            public boolean onItemLongClick(AdapterView<?> adapterView
+                    , View view, final int pos, long l) {
 
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle("Select Your option")
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity
                                         foregfivnesMudels1.get(pos).getCounterType());
                                 foregivnesDataSource.close();
                                 onRestart();
-                                Toast.makeText(getApplicationContext(),"Done",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Done",Toast.LENGTH_LONG).show();
                             }
                         })
                         .setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
@@ -120,6 +120,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onRestart() {
         super.onRestart();
+        // this is for synchronize the the ListView.
         forgivneesListView =(ListView)findViewById(R.id.list_view);
         foregivnesDataSource = new ForegivnesDataSource(getApplicationContext());
         foregivnesDataSource.open();
@@ -149,6 +150,19 @@ public class MainActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        switch (id)
+        {
+            case R.id.hijri_cal :
+                new HijriCalendarDialog.Builder(this)
+                        .setOnDateSetListener(this)
+                        .setMinMaxHijriYear(1440 , 1438)
+                        .setUILanguage(HijriCalendarDialog.Language.Arabic)
+                        .show();
+                break;
+            default:
+                return true;
+        }
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings)
         {
@@ -158,8 +172,17 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
     }
+
+    @Override
+    public void onDateSet(int year, int month, int day) {
+
+        Toast.makeText(getApplicationContext() , "Done" , Toast.LENGTH_SHORT).show();
+    }
+
+
 }
